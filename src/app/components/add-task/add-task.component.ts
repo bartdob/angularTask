@@ -8,7 +8,7 @@ import { Task } from 'src/app/Task';
 })
 export class AddTaskComponent {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter(); 
-  id: number = 100;
+  id?: number;
   text!: string;
   day!: string;
   reminder: boolean = false;
@@ -23,7 +23,7 @@ export class AddTaskComponent {
       text: this.text,
       day: this.day,
       reminder: this.reminder,
-      id: this.id,
+      // id: this.id,
     }
 
     this.onAddTask.emit(newTask);
@@ -31,7 +31,7 @@ export class AddTaskComponent {
     this.text= '';
     this.day ='';
     this.reminder = false;
-    this.id ++;
+    // this.id ++;
   }
 
 }
