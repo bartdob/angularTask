@@ -13,16 +13,10 @@
       "reminder": true
     },
     {
-      "text": "sdf",
-      "day": "sdf",
+      "text": "eee",
+      "day": "eee",
       "reminder": true,
-      "id": 100
-    },
-    {
-      "text": "fds",
-      "day": "df",
-      "reminder": true,
-      "id": 101
+      "id": 4
     }
   ]
 }

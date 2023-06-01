@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,10 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+const appRoutes: Routes = [
+  {path: '', component: TasksComponent}
+]
 
 @NgModule({
   declarations: [
@@ -29,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes, { enableTracing: true})
   ],
   providers: [],
   bootstrap: [AppComponent]

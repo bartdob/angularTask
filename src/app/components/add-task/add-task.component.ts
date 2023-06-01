@@ -37,6 +37,7 @@ export class AddTaskComponent {
     }
 
     this.onAddTask.emit(newTask);
+    window.location.reload();
 
     this.text= '';
     this.day ='';
